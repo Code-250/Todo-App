@@ -11,16 +11,26 @@ class AddTodo extends React.Component {
         })
     }
     handleSubmit = (e)=>{
-        e.preventdefault();
-        console.log(this.state)
+        e.preventDefault();
+        this.props.AddTodo(this.state)
+        this.setState({
+            content:""
+        })
     }
     render(){
         
         return(
             <div className='todo-input'>
-                <form className='input-form' onSubmit={this.handleSubmit}>
-                    <label className='input-title'>Add New Todo:</label>
-                    <input className='input-field'type='text' onChange={this.handleChange}></input>
+                <form className='input-form'
+                 onSubmit={this.handleSubmit}
+                 >
+                    <label className='input-title'>
+                        Add New Todo:
+                    </label>
+                    <input className='input-field'type='text'
+                     onChange={this.handleChange} 
+                     value={this.state.content}
+                     />
                 </form>
             </div>
         )

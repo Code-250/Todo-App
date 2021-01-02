@@ -13,8 +13,9 @@
 /* todos.js */
 .collection-item{
   border:1px solid #2424;
-  padding:30px;
-  margin:30px;
+  padding:10px;
+  margin:10px;
+  margin-left:35px;
   width:100%;
   text-align:center;
 
@@ -25,6 +26,8 @@
   flex-direction:column;
   width:40%;
   margin-left:150px;
+  padding:20px;
+  font-size:auto;
 }
 
 /* input-field */
@@ -36,12 +39,10 @@
 .input-form{
   display:flex;
   flex-direction:column;
-  align-items:start;
   margin-left:0px;
   margin-right:0px;
 } 
 .input-title{
-  text-align:start;
   padding-bottom:0px;
 }
 .input-field{
