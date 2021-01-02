@@ -20,7 +20,7 @@ class AddTodo extends React.Component {
             <div className='todo-input'>
                 <form className='input-form' onSubmit={this.handleSubmit}>
                     <label className='input-title'>Add New Todo:</label>
-                    <input type='text' onChange={this.handleChange}></input>
+                    <input className='input-field'type='text' onChange={this.handleChange}></input>
                 </form>
             </div>
         )
