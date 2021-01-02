@@ -24,3 +24,13 @@
   margin-left:200px;
 }
 
+/* input-field */
+
+.todo-input{
+  display:flex;
+  flex-direction: column;
+}
+.input-form{
+  display:flex;
+  flex-direction:column;
+}

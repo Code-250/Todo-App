@@ -8,7 +8,7 @@ const Todos = ({todos, deleteTodo}) => {
                     <span onClick={()=>{deleteTodo(todo.id)}}>{todo.content}</span>
                 </div>
 
-            )
+            ) 
         })
     ) : (
         <p className='collection-item'>yaay you have finished to days todos add more </p>
