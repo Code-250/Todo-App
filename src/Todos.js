@@ -5,10 +5,13 @@ const Todos = ({todos, deleteTodo}) => {
         todos.map(todo =>{
             return(
                 <div className ='collection-item' key ={todo.id}>
-                    <span onClick={()=>{deleteTodo(todo.id)}}>{todo.content}</span>
+                    <p className='item-text'
+                    onClick={()=>{deleteTodo(todo.id)}}>
+                        {todo.content}
+                    </p>
                 </div>
 
-            )
+            ) 
         })
     ) : (
         <p className='collection-item'>yaay you have finished to days todos add more </p>
