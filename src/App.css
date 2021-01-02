@@ -1,0 +1,25 @@
+.App{
+  width:80%;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+}
+.header{
+  text-align:center;
+  color:blue;
+  font-size:80px;
+  margin-left:350px;
+}
+/* todos.js */
+.collection-item{
+  border:1px solid #2424;
+  padding:30px;
+  margin:30px;
+  margin-left:200px;
+  margin-right:20px;
+  width:90%;
+
+}
+.todos-collection{
+  width:80%;
+}
