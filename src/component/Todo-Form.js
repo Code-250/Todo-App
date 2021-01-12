@@ -1,41 +1,60 @@
-import React,{useState} from "react";
+import React,{useState,useRef, useEffect} from "react";
 
 
 function TodoForm (props){
-    const [input, setInput] =useState("")
-    const [todos, setTodos]= useState("")
+const [input, setInput] =useState(props.edit ? props.edit.value : '');
+const inputRef = useRef(null);
+
+useEffect(()=>{
+    inputRef.current.focus();
+})
     const handleChange = e=>{
         setInput(e.target.value);
-        
     }
     const handleSubmit = e =>{
         e.preventDefault();
-        setTodos([
-            ...todos,
-            {text: input,
-            id:Math.random()*1000
-            }
-        ])
         
-       
-        setInput("");
-        
+        props.onSubmit({
+            id: Math.floor(Math.random()*1000),
+            text: input
+        });
+         setInput("");  
     }
-    console.log(todos)
+    
+    
     return(
         <form 
         className="todo-form"
         onSubmit={handleSubmit}
         >
-            <input
-            type="text"
-            placeholder="Add a todo"
-            value={input}
-            name="text"
-            className="todo-input"
-            onChange={handleChange}
-            />
-            <button className="todo-button">Add Todo</button>
+            {props.edit?(
+            <>
+                <input
+                type="text"
+                placeholder="Update todo"
+                value={input}
+                name="text"
+                className="todo-input edit"
+                onChange={handleChange}
+                ref={inputRef}
+                />
+                <button className="todo-button">Update Todo</button>
+            </>
+            ):(
+            <>
+                <input
+                type="text"
+                placeholder="Add a todo"
+                value={input}
+                name="text"
+                className="todo-input"
+                onChange={handleChange}
+                ref={inputRef}
+                />
+                <button className="todo-button">Add Todo</button>
+            </>
+            )}
+            
         </form>
     )
 }
