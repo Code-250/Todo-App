@@ -45,7 +45,7 @@ function TodoList(){
         setTodos(updatedTodo);
     }
     return (
-        <div className = 'todo-contaier'>
+        <div className = 'todo-container'>
             <h1>To day's Plan</h1>
             <TodoForm onSubmit={addTodo}/>
             <Todo completeTodo={completeTodo} todos={todos}updateTodo={updateTodo} removeTodo={removeTodo}/>

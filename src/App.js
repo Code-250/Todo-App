@@ -4,7 +4,7 @@ import TodoList from './component/TodoList';
 
 function App (){
  return (
-   <div classNmae="todo-app">
+   <div className="todo-app">
     <TodoList/>
    </div>
  )

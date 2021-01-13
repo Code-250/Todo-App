@@ -1,4 +1,5 @@
 import React,{useState,useRef, useEffect} from "react";
+import "../App.css"
 
 
 function TodoForm (props){
@@ -38,7 +39,7 @@ useEffect(()=>{
                 onChange={handleChange}
                 ref={inputRef}
                 />
-                <button className="todo-button">Update Todo</button>
+                <button className="todo-button edit">Update Todo</button>
             </>
             ):(
             <>
